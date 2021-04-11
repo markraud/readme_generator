@@ -9,26 +9,43 @@ const questions = [
     type: 'input',
     message: 'What is the title of the application?',
     name: 'title',
+    default: '**enter the title of the app here**',
   },
   {
     type: 'input',
     message: 'Please enter a description of the application.',
     name: 'description',
+    default: '**enter a description of the app here**',
   },
   {
     type: 'input',
     message: 'Please enter the installation instructions.',
     name: 'install',
+    default: '**enter a install instructions here**',
   },
   {
     type: 'input',
     message: 'Please enter the usage information.',
     name: 'usage',
+    default: '**enter a usage info here**',
+  },
+  {
+    type: 'list',
+    choices: ["MIT","GNU","The Unlicense"],
+    message: 'Please choose a licence:',
+    name: 'license',
   },
   {
     type: 'input',
-    message: 'Please choose a licence:',
-    name: 'license',
+    message: 'Please enter the contribution guidelines.',
+    name: 'contributors',
+    default: '**enter the contribution guidelines here**',
+  },
+  {
+    type: 'input',
+    message: 'Please enter the instructions for testing',
+    name: 'testing',
+    default: '**enter a instructions for testing here**',
   },
 ];
 
@@ -42,6 +59,9 @@ function askQuestions() {
 
     });
 }
+
+// this console.log prints out [Function: generateMarkdown]
+// console.log(generateMarkdown);  
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
