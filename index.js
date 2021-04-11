@@ -32,20 +32,31 @@ const questions = [
   },
 ];
 
-inquirer
+function askQuestions() {
+  inquirer
   .prompt(questions)
   .then((response) => {
-      data = response
-      console.log(data);
+      data = response;
+      // console.log(data);
+      return data;
     });
-
-// console.log(data);
+}
 
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+// inquirer
+//   .prompt(questions)
+//   .then((response) => {
+//       data = response;
+//       // console.log(data);
+//       return data;
+//     });
+}
 
 // Function call to initialize app
-// init();
+init();
+askQuestions();
+// console.log(data);
