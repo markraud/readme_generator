@@ -32,8 +32,10 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-
+writeToFile(fileName, data => {
+  fs.writeFile("log.txt", ` The title is ${question.title} `, (err) =>
+  err ? console.error(err) : console.log('Success!'))
+});
 
 
 const inquirer = require('inquirer');
