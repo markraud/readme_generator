@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
-// I don't understand what it wants us to do here.  we need to have 
-
+const inquirer = require('inquirer');
+const fs = require('fs');
+let data;
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -28,33 +29,23 @@ const questions = [
     type: 'input',
     message: 'Please choose a licence:',
     name: 'license',
-  }
+  },
 ];
 
-// TODO: Create a function to write README file
-writeToFile(fileName, data => {
-  fs.writeFile("log.txt", ` The title is ${question.title} `, (err) =>
-  err ? console.error(err) : console.log('Success!'))
-});
-
-
-const inquirer = require('inquirer');
-const fs = require('fs');
-
 inquirer
-.prompt(questions)
-.then((response) => {
-  console.log(response.title)
-  console.log(response.description)
-  console.log(response.install)
-  console.log(response.usage)
-  console.log(response.license) , (err) =>
-err ? console.error(err) : console.log('Success!'))
-);
+  .prompt(questions)
+  .then((response) => {
+      data = response
+      console.log(data);
+    });
 
+// console.log(data);
+
+// TODO: Create a function to write README file
+// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-// function init() {
+// function init() {}
 
 // Function call to initialize app
 // init();
