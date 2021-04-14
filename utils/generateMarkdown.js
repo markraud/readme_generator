@@ -22,6 +22,9 @@ function generateMarkdown(data) {
   ##GitHub Information: ${data.github}
   ##Email Information: ${data.email}
   ##MIT Licence thing: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ##GNU GPLv3: [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  ##The Unlicense: [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+  
 
 `}
 module.exports = generateMarkdown;
