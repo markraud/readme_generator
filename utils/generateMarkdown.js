@@ -12,12 +12,9 @@
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} this is a test
+  return `# ${data.title}
 
-
-
-
-`;
-}
-
+`}
 module.exports = generateMarkdown;
+// let test = "this is a test"
+// module.exports = test;
