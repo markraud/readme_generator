@@ -1,8 +1,17 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//   if license = 
-// }
+function renderLicenseBadge(license) {
+  if (license === 'None') {
+    return '';
+  } else if (license === "MIT") {
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+  } else if (license === "GNU GPLv3") {
+    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+  } else {
+    return `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+  }
+
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -19,14 +28,18 @@ function generateMarkdown(data) {
   ## Descrption: 
   ${data.description}
 
-  ## Installation instructions: 
+  ## Table of Contents:
+
+  * [Installation](#installation)
+
+  ## Installation 
   ${data.install}
 
   ## Usage: 
   ${data.usage}
 
   ## License Information: 
-  ${data.license}
+  ${renderLicenseBadge(data.license)}
 
   ## Contribution Information: 
   ${data.contributions}
@@ -41,20 +54,17 @@ function generateMarkdown(data) {
   ${data.email}
 
 
-  ## MIT Licence thing: 
-
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-  ## GNU GPLv3: 
-
-  [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-  ## The Unlicense: 
-
-  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-
-
 `}
 module.exports = generateMarkdown;
-// let test = "this is a test"
-// module.exports = test;
+
+// ## MIT Licence thing: 
+
+//   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+//   ## GNU GPLv3: 
+
+//   [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+//   ## The Unlicense: 
+
+//   [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
