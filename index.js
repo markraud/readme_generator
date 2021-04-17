@@ -40,13 +40,13 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Enter the contribution guidelines.',
+    message: 'Enter the contributors to the app.',
     name: 'contributions',
     default: 'None',
   },
   {
     type: 'input',
-    message: 'Enter the instructions for testing.',
+    message: 'Enter information about testing.',
     name: 'testing',
     default: 'None',
   },
@@ -67,7 +67,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile() {
   // console.log('this is writeToFile test');
-  fs.writeFile("README-out.md",generateMarkdown(data), (err) =>
+  fs.writeFile("README-new.md",generateMarkdown(data), (err) =>
   err ? console.error(err) : console.log('Success!'))
 }
 
