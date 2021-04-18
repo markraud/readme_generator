@@ -1,10 +1,15 @@
 # Title: README GENERATOR
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  ## Descrption: 
+  ## Descrption 
   This is an app that automates the generation of a README file.  It takes user input from the command line and creates a new README file.
 
-  ## Table of Contents:
+
+  ## Video Walkthrough
+  [Screencastify Video](https://github.com/markraud)
+
+
+  ## Table of Contents
 
   * [Installation](#installation)
 
